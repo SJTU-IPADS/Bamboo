@@ -1,5 +1,5 @@
 # Bamboo
-We introduce Bamboo, a new 7B LLM that has nearly high sparsity and performance levels on par with Mistral-7B. In this repo, we provide the detail of our model.
+We introduce Bamboo, a new 7B LLM that boasts exceptional sparsity while delivering performance equivalent to Mistral-7B. In this repo, we provide the details of our model.
 
 ## Models
 ## Performance with different sparsity
@@ -10,6 +10,8 @@ Recent studies([Zhang et al., 2024](https://arxiv.org/pdf/2402.03804.pdf)) has s
 ## Objective Performance Evaluation
 
 ## Speed Evaluation
+
+## Limitations
 
 ## Citation
 Please kindly cite using the following BibTeX:
