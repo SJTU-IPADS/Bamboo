@@ -3,19 +3,29 @@ We introduce Bamboo, a new 7B LLM that boasts exceptional sparsity while deliver
 
 ## Models
 
-| Model                   | Transformers(HF)                                                              |
-|-------------------------|-------------------------------------------------------------------------------|
-| **Bamboo-7B-base-v0.1** | [Bamboo-7B-base-v0.1](https://huggingface.co/PowerInfer/Bamboo-base-v0.1)     |
-| **Bamboo-7B-DPO-v0.1**  | [Bamboo-7B-DPO-v0.1](https://huggingface.co/PowerInfer/Bamboo-Bagel-DPO-v0.1) |
+| Model                   | Transformers(HF)                                                           | PowerInfer/llama.cpp(GGUF)                                                       |
+| ----------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| **Bamboo-7B-base-v0.1** | [Bamboo-base-v0.1](https://huggingface.co/PowerInfer/Bamboo-base-v0.1)     | [Bamboo-base-v0.1-gguf](https://huggingface.co/PowerInfer/Bamboo-base-v0.1-gguf) |
+| **Bamboo-7B-DPO-v0.1**  | [Bamboo-DPO-v0.1](https://huggingface.co/PowerInfer/Bamboo-Bagel-DPO-v0.1) | [Bamboo-DPO-v0.1-gguf](https://huggingface.co/PowerInfer/Bamboo-DPO-v0.1-gguf)   |
 
 ## Performance with different sparsity
 Recent studies([Zhang et al., 2024](https://arxiv.org/pdf/2402.03804.pdf)) has shown that the activation sparsity exists in LLMs by only keep the top-k activation neurons in each layer. In this subsection, we show the performance of Bamboo with different sparsity with the same method.
 
 ## CDF of neurons distribution
 
-## Objective Performance Evaluation
+## Performance Evaluation
 
 ## Speed Evaluation
+
+https://github.com/SJTU-IPADS/Bamboo/assets/34213478/edb1d5be-cf3e-44aa-b958-f0970ca74959
+
+<sub>Both PowerInfer and llama.cpp fully utilized the same hardware of Intel Core i7-13700(8 threads) and Nvidia RTX 2080Ti(11G).</sub>
+
+| Scenario       | Hardware                            | with PowerInfer | with llama.cpp | Speedup |
+| -------------- | ----------------------------------- | --------------- | -------------- | ------- |
+| CPU+GPU Hybird | Core i7-13700(8T) + RTX 2080Ti(11G) | 33.50           | 7.60           | 4.41x   |
+| Full GPU       | RTX 4090(24G)                       | 89.42           | 58.34          | 1.53x   |
+| Full CPU       | Core i9-13900K(8T)                  | 9.09            | 4.78           | 1.90x   |
 
 ## Limitations
 * Bamboo, having undergone training with only 200B tokens, may still exhibit performance gaps in certain tasks.
