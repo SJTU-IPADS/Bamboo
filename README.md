@@ -25,8 +25,8 @@ Our evaluation is based on the framework lm-evaluation-harness. The evaluation d
 
 |         | MMLU   | Winogrande | TruthfulQA | Hellaswag | GSM8K  | Arc-C  | HumanEval | BBH  | Average |
 | ------- | ------ | ---------- | ---------- | --------- | ------ | ------ | --------- | ---- | ------- |
-| Ours    | 63.89 | 76.16     | 44.06     | 82.17    | 52.84 | 62.20 | 25.6     |      |         |
-| Mistral | 62.65 | 79.24     | 42.62     | 83.32    | 40.18 | 61.43 | 26.21    |      |         |
+| Ours    | 63.89 | 76.16     | 44.06     | 82.17    | 52.84 | 62.20 | 25.6     |  50.35    |    57.1     |
+| Mistral | 62.65 | 79.24     | 42.62     | 83.32    | 40.18 | 61.43 | 26.21    |   56.35   |    56.5     |
 
 ## Speed Evaluation
 
