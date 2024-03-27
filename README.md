@@ -1,5 +1,5 @@
 # Bamboo
-We introduce Bamboo-v0.1, a new 7B LLM that boasts high sparsity while delivering performance equivalent to Mistral-7B. In this repo, we provide the details of our model.
+We introduce Bamboo-v0.1, a new 7B LLM that boasts high sparsity while delivering performance equivalent to Mistral-7B. We hope our work can inspire more research on LLM efficiency. In this repo, we provide the details of our model.
 
 ## Models
 
@@ -12,8 +12,9 @@ We introduce Bamboo-v0.1, a new 7B LLM that boasts high sparsity while deliverin
 Recent studies([Zhang et al., 2024](https://arxiv.org/pdf/2402.03804.pdf)) has shown that the activation sparsity exists in LLMs by only keep the top-k activation neurons in each layer. In this subsection, we show the performance of Bamboo with different sparsity with the same method.
 
 ## CDF of neurons distribution
-Here we show the CDF of neurons distribution of Bamboo-7B-base-v0.1.
-![CDF of neurons distribution](./figures/cdf-base.pdf)
+Here we show the CDF of neurons distribution of Bamboo-7B-base-v0.1 for every FFN layer.
+<img src="./figures/cdf.png" alt="CDF of neurons distribution" width="350"/>
+
 
 ## Performance Evaluation
 
