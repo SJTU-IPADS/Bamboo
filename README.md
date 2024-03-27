@@ -66,7 +66,7 @@ When the result is greater than 0.85, it is highly likely that the dataset has b
 Note that GSM8K often scores very highly on this toolkit, according to https://huggingface.co/spaces/Yeyito/llm_contamination_detector
 ## Future Work
 
-- Mixtral8*7b level sparse activation model
+- Mixtral8x7B level sparse activation model
 - Better base and chat-7B model
   
 ## License
