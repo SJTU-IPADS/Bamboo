@@ -25,7 +25,7 @@ Here we report the CDF of neurons distribution of Bamboo-7B-base-v0.1 for every 
 <img src="./figures/cdf.svg" alt="CDF of neurons distribution" width="400"/>
 
 
-## Performance Evaluation
+## Model Performance
 Our evaluation is based on the framework lm-evaluation-harness. The evaluation details are listed as follows:
 
 - Huggingface LLM Leaderboard tasks.
@@ -36,13 +36,13 @@ Our evaluation is based on the framework lm-evaluation-harness. The evaluation d
 | Bamboo  | **57.1**  | 63.89 | 76.16     | 44.06     | 82.17    | 52.84 | 62.20 | 25.6     |  50.35    |
 | Mistral-v0.1 | **56.5** | 62.65 | 79.24     | 42.62     | 83.32    | 40.18 | 61.43 | 26.21    |   56.35   | 
 
-## Speed Evaluation
+## Inference Efficiency
 
 https://github.com/SJTU-IPADS/Bamboo/assets/34213478/34c3024d-2dc1-4740-b12c-b26d82a5874d
 
 <sub>Both PowerInfer and llama.cpp fully utilized the same hardware of Intel Core i7-13700 (8 threads) and Nvidia RTX 2080Ti (11GB).</sub>
 
-Below is a detailed comparison of decoding speeds (tokens/second) achieved on Bamboo-7B-base with [PowerInfer](https://github.com/SJTU-IPADS/PowerInfer) and [llama.cpp](https://github.com/ggerganov/llama.cpp) across various hardware configurations.
+Below is a detailed comparison of inference speeds (tokens/second) achieved on Bamboo-7B-base with [PowerInfer](https://github.com/SJTU-IPADS/PowerInfer) and [llama.cpp](https://github.com/ggerganov/llama.cpp) across various hardware configurations.
 
 | Scenario       | Hardware                            | with PowerInfer | with llama.cpp | Speedup |
 | -------------- | ----------------------------------- | --------------- | -------------- | ------- |
@@ -66,7 +66,7 @@ When the result is greater than 0.85, it is highly likely that the dataset has b
 Note that GSM8K often scores very highly on this toolkit, according to https://huggingface.co/spaces/Yeyito/llm_contamination_detector
 ## Future Work
 
-- Mixtral8x7B level sparse activation model
+- Mixtral 8x7B level sparse activation model
 - Better base and chat-7B model
   
 ## License
