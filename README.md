@@ -1,5 +1,5 @@
 # Bamboo
-We introduce Bamboo-v0.1, a new 7B LLM that boasts high sparsity while delivering performance equivalent to Mistral-7B. We hope our work can inspire more research on LLM efficiency. In this repo, we provide the details of our model.
+We introduce Bamboo-v0.1, a new 7B LLM that boasts high sparsity while delivering performance equivalent to Mistral-7B. We hope our work can inspire more research on LLM sparsity and efficiency. In this repo, we provide the details of our model.
 
 ## Models
 
@@ -9,7 +9,7 @@ We introduce Bamboo-v0.1, a new 7B LLM that boasts high sparsity while deliverin
 | **Bamboo-7B-DPO-v0.1**  | [Bamboo-DPO-v0.1](https://huggingface.co/PowerInfer/Bamboo-Bagel-DPO-v0.1) | [Bamboo-DPO-v0.1-gguf](https://huggingface.co/PowerInfer/Bamboo-DPO-v0.1-gguf)   |
 
 ## Performance with different sparsity
-Recent studies([Zhang et al., 2024](https://arxiv.org/pdf/2402.03804.pdf)) has shown that the activation sparsity exists in LLMs by only keep the top-k activation neurons in each layer. In this subsection, we show the performance of Bamboo with different sparsity with the same method.
+Recent studies ([Zhang et al., 2024](https://arxiv.org/pdf/2402.03804.pdf)) have shown that the activation sparsity exists in LLMs by only keeping the top-k activation neurons in each layer. In this subsection, we show the performance of Bamboo with different sparsity with the same method.
 
 ## CDF of neurons distribution
 Here we show the CDF of neurons distribution of Bamboo-7B-base-v0.1 for every FFN layer.
@@ -22,9 +22,9 @@ Here we show the CDF of neurons distribution of Bamboo-7B-base-v0.1 for every FF
 
 https://github.com/SJTU-IPADS/Bamboo/assets/34213478/edb1d5be-cf3e-44aa-b958-f0970ca74959
 
-<sub>Both PowerInfer and llama.cpp fully utilized the same hardware of Intel Core i7-13700(8 threads) and Nvidia RTX 2080Ti(11G).</sub>
+<sub>Both PowerInfer and llama.cpp fully utilized the same hardware of Intel Core i7-13700 (8 threads) and Nvidia RTX 2080Ti (11GB).</sub>
 
-Below is a detailed comparison of performance gains achieved on Bamboo-7B-base with [PowerInfer](https://github.com/SJTU-IPADS/PowerInfer) and [llama.cpp](https://github.com/ggerganov/llama.cpp) across various hardware configurations.
+Below is a detailed comparison of decoding speeds achieved on Bamboo-7B-base with [PowerInfer](https://github.com/SJTU-IPADS/PowerInfer) and [llama.cpp](https://github.com/ggerganov/llama.cpp) across various hardware configurations.
 
 | Scenario       | Hardware                            | with PowerInfer | with llama.cpp | Speedup |
 | -------------- | ----------------------------------- | --------------- | -------------- | ------- |
