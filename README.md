@@ -9,7 +9,15 @@ We introduce Bamboo-v0.1, a new 7B LLM that boasts high sparsity while deliverin
 | **Bamboo-7B-DPO-v0.1**  | [Bamboo-DPO-v0.1](https://huggingface.co/PowerInfer/Bamboo-Bagel-DPO-v0.1) | [Bamboo-DPO-v0.1-gguf](https://huggingface.co/PowerInfer/Bamboo-DPO-v0.1-gguf)   |
 
 ## Performance with different sparsity
-Recent studies ([Zhang et al., 2024](https://arxiv.org/pdf/2402.03804.pdf)) have shown that the activation sparsity exists in LLMs by only keeping the top-k activation neurons in each layer. In this subsection, we show the performance of Bamboo with different sparsity with the same method.
+Recent studies ([Zhang et al., 2024](https://arxiv.org/pdf/2402.03804.pdf)) have shown that the activation sparsity exists in LLMs by only keeping the top-k activation neurons in each layer. In this subsection, we show the performance of Bamboo with different sparsity with the same method. We evaluate the perplexity on wikitext-2-raw-v1. 
+
+| Top-k Sparsity      | PPL |
+| ----------- | ----------- |
+| 100%      | 6.484       |
+| 20%   | 6.484        |
+| 15%   | 6.485        |
+| 12%   | 6.497        |
+| 10%   | 6.524        |
 
 ## CDF of neurons distribution
 Here we report the CDF of neurons distribution of Bamboo-7B-base-v0.1 for every FFN layer. We profile neurons' activation with [cosmopedia](https://huggingface.co/datasets/HuggingFaceTB/cosmopedia) dataset for around 1B tokens. 
