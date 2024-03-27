@@ -76,7 +76,7 @@ Please kindly cite using the following BibTeX:
 ```
 @misc{bamboo,
     title={Bamboo: Harmonizing Sparsity and Performance in Large Language Models}, 
-    author={Yixin Song, Haotong Xie, Zeyu Mi, Haibo Chen},
+    author={Yixin Song, Haotong Xie, Zeyu Mi, Li Ma, Haibo Chen},
     year={2024}
 }
 ```
