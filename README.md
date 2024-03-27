@@ -63,7 +63,7 @@ When the result is greater than 0.85, it is highly likely that the dataset has b
 | Bamboo | 0.22 | 0.02 | 0.08 | 0.24 | 0.02 | 0.99 |
 | Mistral-v0.1 | 0.45| 0.03 | 0.08| 0.24| 0.04 | 0.91 |
 
-Note that GSM8K often scores very highly on this contamination suite, according to https://huggingface.co/spaces/Yeyito/llm_contamination_detector
+Note that GSM8K often scores very highly on this toolkit, according to https://huggingface.co/spaces/Yeyito/llm_contamination_detector
 ## Future Work
 
 - Mixtral8*7b level sparse activation model
