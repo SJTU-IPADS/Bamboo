@@ -12,11 +12,20 @@ We introduce Bamboo-v0.1, a new 7B LLM that boasts high sparsity while deliverin
 Recent studies ([Zhang et al., 2024](https://arxiv.org/pdf/2402.03804.pdf)) have shown that the activation sparsity exists in LLMs by only keeping the top-k activation neurons in each layer. In this subsection, we show the performance of Bamboo with different sparsity with the same method.
 
 ## CDF of neurons distribution
-Here we show the CDF of neurons distribution of Bamboo-7B-base-v0.1 for every FFN layer.
+Here we report the CDF of neurons distribution of Bamboo-7B-base-v0.1 for every FFN layer. We profile neurons' activation with [cosmopedia](https://huggingface.co/datasets/HuggingFaceTB/cosmopedia) dataset for around 1B tokens. 
 <img src="./figures/cdf.png" alt="CDF of neurons distribution" width="350"/>
 
 
 ## Performance Evaluation
+Our evaluation is based on the framework lm-evaluation-harness. The evaluation details are listed as follows:
+
+- Huggingface LLM Leaderboard tasks.
+- Other Popular Benchmarks: We report the average accuracies on Big Bench Hard (BBH) (3-shot), HumanEval.
+
+|         | MMLU   | Winogrande | TruthfulQA | Hellaswag | GSM8K  | Arc-C  | HumanEval | BBH  | Average |
+| ------- | ------ | ---------- | ---------- | --------- | ------ | ------ | --------- | ---- | ------- |
+| Ours    | 63.89 | 76.16     | 44.06     | 82.17    | 52.84 | 62.20 | 25.6     |      |         |
+| Mistral | 62.65 | 79.24     | 42.62     | 83.32    | 40.18 | 61.43 | 26.21    |      |         |
 
 ## Speed Evaluation
 
