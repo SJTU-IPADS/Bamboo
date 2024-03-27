@@ -31,10 +31,10 @@ Our evaluation is based on the framework lm-evaluation-harness. The evaluation d
 - Huggingface LLM Leaderboard tasks.
 - Other Popular Benchmarks: We report the average accuracies on Big Bench Hard (BBH) (3-shot), HumanEval.
 
-|         | MMLU   | Winogrande | TruthfulQA | Hellaswag | GSM8K  | Arc-C  | HumanEval | BBH  | Average |
+|        | Average | MMLU   | Winogrande | TruthfulQA | Hellaswag | GSM8K  | Arc-C  | HumanEval | BBH  | 
 | ------- | ------ | ---------- | ---------- | --------- | ------ | ------ | --------- | ---- | ------- |
-| *Bamboo*    | 63.89 | 76.16     | 44.06     | 82.17    | 52.84 | 62.20 | 25.6     |  50.35    |    *57.1*     |
-| Mistral | 62.65 | 79.24     | 42.62     | 83.32    | 40.18 | 61.43 | 26.21    |   56.35   |    56.5     |
+| Bamboo  | **57.1**  | 63.89 | 76.16     | 44.06     | 82.17    | 52.84 | 62.20 | 25.6     |  50.35    |
+| Mistral-v0.1 | **56.5** | 62.65 | 79.24     | 42.62     | 83.32    | 40.18 | 61.43 | 26.21    |   56.35   | 
 
 ## Speed Evaluation
 
@@ -55,6 +55,15 @@ Below is a detailed comparison of decoding speeds (tokens/second) achieved on Ba
 * The Bamboo model has only been trained on English-language datasets, hence its capabilities in other languages are still lacking.
 * The model may produce unexpected outputs due to its small size and probabilistic generation paradigm.
 
+## Contamination Results
+Here we report our contamination results using https://github.com/fblgit/detect-pretrain-code-contamination/tree/winofix. We use llama-2-7b as reference model. 
+When the result is greater than 0.85, it is highly likely that the dataset has been trained.
+|Model| TruthfulQA | Winogrande | ARC | MMLU | Hellaswag | GSM8K | 
+|---| --- | --- | --- | --- | --- | --- |
+| Bamboo | 0.22 | 0.02 | 0.08 | 0.24 | 0.02 | 0.99 |
+| Mistral-v0.1 | 0.45| 0.03 | 0.08| 0.24| 0.04 | 0.91 |
+
+Note that GSM8K often scores very highly on this contamination suite, according to https://huggingface.co/spaces/Yeyito/llm_contamination_detector
 ## Future Work
 
 - Mixtral8*7b level sparse activation model
