@@ -11,7 +11,7 @@ We introduce Bamboo-v0.1, a new 7B LLM that boasts high sparsity while deliverin
 ## Performance with different sparsity
 Recent studies ([Zhang et al., 2024](https://arxiv.org/pdf/2402.03804.pdf)) have shown that the activation sparsity exists in LLMs by only keeping the top-k activation neurons in each layer. In this subsection, we show the performance of Bamboo with different sparsity with the same method. We evaluate the perplexity on wikitext-2-raw-v1. 
 
-| Top-k Sparsity      | PPL |
+| Top-k Neurons      | PPL |
 | ----------- | ----------- |
 | 100%      | 6.484       |
 | 20%   | 6.484        |
