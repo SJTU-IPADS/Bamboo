@@ -68,7 +68,10 @@ Note that GSM8K often scores very highly on this contamination suite, according 
 
 - Mixtral8*7b level sparse activation model
 - Better base and chat-7B model
+  
+## License
 
+The code is licensed under Apache-2.0, while model weights are fully open for academic research and also allow **free** commercial usage. 
 
 ## Citation
 Please kindly cite using the following BibTeX:
