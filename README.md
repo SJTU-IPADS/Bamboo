@@ -13,7 +13,8 @@ Recent studies ([Zhang et al., 2024](https://arxiv.org/pdf/2402.03804.pdf)) have
 
 ## CDF of neurons distribution
 Here we report the CDF of neurons distribution of Bamboo-7B-base-v0.1 for every FFN layer. We profile neurons' activation with [cosmopedia](https://huggingface.co/datasets/HuggingFaceTB/cosmopedia) dataset for around 1B tokens. 
-<img src="./figures/cdf.png" alt="CDF of neurons distribution" width="350"/>
+
+<img src="./figures/cdf.png" alt="CDF of neurons distribution" width="400"/>
 
 
 ## Performance Evaluation
