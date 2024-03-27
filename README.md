@@ -46,9 +46,9 @@ Below is a detailed comparison of decoding speeds (tokens/second) achieved on Ba
 
 | Scenario       | Hardware                            | with PowerInfer | with llama.cpp | Speedup |
 | -------------- | ----------------------------------- | --------------- | -------------- | ------- |
-| CPU+GPU Hybird | Core i7-13700(8T) + RTX 2080Ti(11GB) | 33.50           | 7.64           | 4.38x   |
-| Full GPU       | RTX 4090(24GB)                       | 89.42           | 58.34          | 1.53x   |
-| Full CPU       | Core i9-13900K(8T)                  | 9.09            | 4.78           | 1.90x   |
+| CPU+GPU Hybird | Core i7-13700(8T) + RTX 2080Ti(11GB)| 33.50           | 7.64           | 4.38x   |
+| Full GPU       | RTX 4090(24GB)                      | 92.46           | 58.34          | 1.58x   |
+| Full CPU       | Core i9-13900K(8T)                  | 9.94            | 4.78           | 2.08x   |
 
 ## Limitations
 * Bamboo, having undergone training with only 200B tokens, may still exhibit performance gaps in certain tasks.
