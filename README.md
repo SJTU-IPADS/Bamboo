@@ -38,8 +38,8 @@ Below is a detailed comparison of decoding speeds (tokens/second) achieved on Ba
 
 | Scenario       | Hardware                            | with PowerInfer | with llama.cpp | Speedup |
 | -------------- | ----------------------------------- | --------------- | -------------- | ------- |
-| CPU+GPU Hybird | Core i7-13700(8T) + RTX 2080Ti(11G) | 33.50           | 7.64           | 4.38x   |
-| Full GPU       | RTX 4090(24G)                       | 89.42           | 58.34          | 1.53x   |
+| CPU+GPU Hybird | Core i7-13700(8T) + RTX 2080Ti(11GB) | 33.50           | 7.64           | 4.38x   |
+| Full GPU       | RTX 4090(24GB)                       | 89.42           | 58.34          | 1.53x   |
 | Full CPU       | Core i9-13900K(8T)                  | 9.09            | 4.78           | 1.90x   |
 
 ## Limitations
