@@ -20,7 +20,7 @@ Here we show the CDF of neurons distribution of Bamboo-7B-base-v0.1 for every FF
 
 ## Speed Evaluation
 
-https://github.com/SJTU-IPADS/Bamboo/assets/34213478/edb1d5be-cf3e-44aa-b958-f0970ca74959
+https://github.com/SJTU-IPADS/Bamboo/assets/34213478/34c3024d-2dc1-4740-b12c-b26d82a5874d
 
 <sub>Both PowerInfer and llama.cpp fully utilized the same hardware of Intel Core i7-13700 (8 threads) and Nvidia RTX 2080Ti (11GB).</sub>
 
@@ -28,7 +28,7 @@ Below is a detailed comparison of decoding speeds (tokens/second) achieved on Ba
 
 | Scenario       | Hardware                            | with PowerInfer | with llama.cpp | Speedup |
 | -------------- | ----------------------------------- | --------------- | -------------- | ------- |
-| CPU+GPU Hybird | Core i7-13700(8T) + RTX 2080Ti(11G) | 33.50           | 7.60           | 4.41x   |
+| CPU+GPU Hybird | Core i7-13700(8T) + RTX 2080Ti(11G) | 33.50           | 7.64           | 4.38 x   |
 | Full GPU       | RTX 4090(24G)                       | 89.42           | 58.34          | 1.53x   |
 | Full CPU       | Core i9-13900K(8T)                  | 9.09            | 4.78           | 1.90x   |
 
