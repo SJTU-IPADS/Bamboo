@@ -1,5 +1,5 @@
 # Bamboo
-We introduce Bamboo-v0.1, a new 7B LLM that boasts high sparsity while delivering performance equivalent to Mistral-7B. We hope our work can inspire more research on LLM sparsity and efficiency. In this repo, we provide the details of our model.
+We introduce Bamboo-v0.1, a new 7B LLM that boasts high sparsity while delivering performance equivalent to Mistral-7B. This repo provides the details of the model.
 
 ## Models
 
@@ -50,11 +50,6 @@ Below is a detailed comparison of inference speeds (tokens/second) achieved on B
 | Full GPU       | RTX 4090(24GB)                      | 92.46           | 58.34          | 1.58x   |
 | Full CPU       | Core i9-13900K(8T)                  | 9.94            | 4.78           | 2.08x   |
 
-## Limitations
-* Bamboo, having undergone training with only 200B tokens, may still exhibit performance gaps in certain tasks.
-* The Bamboo model has only been trained on English-language datasets, hence its capabilities in other languages are still lacking.
-* The model may produce unexpected outputs due to its small size and probabilistic generation paradigm.
-
 ## Contamination Results
 Here we report our contamination results using https://github.com/fblgit/detect-pretrain-code-contamination/tree/winofix. We use llama-2-7b as reference model. 
 When the result is greater than 0.85, it is highly likely that the dataset has been trained.
@@ -64,6 +59,12 @@ When the result is greater than 0.85, it is highly likely that the dataset has b
 | Mistral-v0.1 | 0.45| 0.03 | 0.08| 0.24| 0.04 | 0.91 |
 
 Note that GSM8K often scores very highly on this toolkit, according to https://huggingface.co/spaces/Yeyito/llm_contamination_detector
+
+## Limitations
+* Bamboo, having undergone training with only 200B tokens, may still exhibit performance gaps in certain tasks.
+* The Bamboo model has only been trained on English-language datasets, hence its capabilities in other languages are still lacking.
+* The model may produce unexpected outputs due to its small size and probabilistic generation paradigm.
+
 ## Future Work
 
 - Mixtral 8x7B level sparse activation model
